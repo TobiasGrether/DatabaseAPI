@@ -16,12 +16,10 @@ Once you have a Connection Object,
 Making Insertion Statements is really simply
 The Method header for that is 
 `(String $query, String $database, Closure $action, array $data)`
-``
-$query
-`` is the MySQL Query you want to execute
-``$database`` is the Name of the Database you want to do the Insertion in \n
-``$action`` is the Closure which can be executed after the database has executed the query, for example for giving a success message
-``$data`` is an Array of various DataTypes you can use in `$action` to access different System Parts. Please note that only primitive Data Types are allowed!
+'$query` is the MySQL Query you want to execute <br />
+`$database` is the Name of the Database you want to do the Insertion in <br />
+`$action` is the Closure which can be executed after the database has executed the query, for example for giving a success message<br />
+`$data` is an Array of various DataTypes you can use in `$action` to access different System Parts. Please note that only primitive Data Types are allowed!<br />
 
 # Making Selection Statements
 Making Selection Statements in not really different
