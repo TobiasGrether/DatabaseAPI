@@ -39,16 +39,16 @@ Here you have an example for an Connection Object Creation:
 
 ### Insertion Statements
 Here is an Insertion Statement example:
-`$connection->execute("INSERT INTO database_test(val) VALUES ('ABC')",
+```$connection->execute("INSERT INTO database_test(val) VALUES ('ABC')",
 "database_test",
 function($result, $extra){
   Server::getInstance()->getPlayerExact($extra["player"])->sendMessage($result); // Either true or false
  },
- ["player" => $player->getName()]);`
+ ["player" => $player->getName()]);```
  
  ### Selection Statement
  Here is an Selection Statement example:
- `$connection->executeQuery("SELECT * FROM players",
+ ```$connection->executeQuery("SELECT * FROM players",
  "player_list", 
  function($result){
   $data = [];
@@ -60,4 +60,4 @@ function($result, $extra){
   function($result, $extra){
     Server::getInstance()->getPlayerExact($extra["player])->sendMessage("Online Players: " . implode(", ", $result));
   },
-  ["player" => $player->getName()]);`
+  ["player" => $player->getName()]);```
