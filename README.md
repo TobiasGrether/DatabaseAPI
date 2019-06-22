@@ -22,7 +22,7 @@ The Method header for that is <br />
 
 # Making Selection Statements
 Making Selection Statements in not really different
-You have the Method Header
+You have the Method Header<br />
 `(String $query, String $database, \Closure $datahandler = null, \Closure $action = null, array $data = [])`<br />
 `$query` is the MySQL Query that should be executed<br />
 `$database` is the Database name you want to run the Query in<br />
@@ -33,7 +33,7 @@ You have the Method Header
 ## Examples
 
 ### Connection Creation
-Here you have an example for an Connection Object Creation:
+Here you have an example for an Connection Object Creation:<br />
 `$connection = DatabaseAPI::constructConnection("mysql.battlemc.de", "stats", "justanotherpassword");`<br />
 
 ### Insertion Statements
