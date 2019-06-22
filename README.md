@@ -5,7 +5,7 @@
 The Database API has some really simple mechanics. You can create one object to use for an infinite number of database connections<br />
 For that you'll need to call the Method found in the DatabaseAPI, <br />
 `DatabaseAPI::constructConnection`, what returns an new Instance of Connection.<br />
-This method has the method header `(String $host, String $user, String $password)`.<br />
+This method has the method header <br />`(String $host, String $user, String $password)`.<br />
 `$host` is the IP-Address your MySQL-Server is running on,<br />
 `$user` is the MySQL User you want to connect over<br />
 `$password` is the password of the MySQL User.<br />
