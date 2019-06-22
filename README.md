@@ -48,6 +48,7 @@ function($result, $extra){
  
  ### Selection Statement
  Here is an Selection Statement example:
+ 
  ```$connection->executeQuery("SELECT * FROM players",
  "player_list", 
  function($result){
