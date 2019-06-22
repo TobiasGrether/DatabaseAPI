@@ -19,7 +19,7 @@ The Method header for that is
 ``
 $query
 `` is the MySQL Query you want to execute
-``$database`` is the Name of the Database you want to do the Insertion in
+``$database`` is the Name of the Database you want to do the Insertion in \n
 ``$action`` is the Closure which can be executed after the database has executed the query, for example for giving a success message
 ``$data`` is an Array of various DataTypes you can use in `$action` to access different System Parts. Please note that only primitive Data Types are allowed!
 
