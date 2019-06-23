@@ -23,12 +23,14 @@ The Method header for that is <br />
 # Making Selection Statements
 Making Selection Statements in not really different
 You have the Method Header<br />
-`(String $query, String $database, \Closure $datahandler = null, \Closure $action = null, array $data = [])`<br />
+`(String $query, String $database, \Closure $datahandler = null, \Closure $action = null, array $data = [], ...$closures)`<br />
 `$query` is the MySQL Query that should be executed<br />
 `$database` is the Database name you want to run the Query in<br />
 `$datahandler` Is the action you want to execute when the Task has received the data. The Return value of that will be passed to<br /> `$action` as $data<br />
 `$action` is the Action that is executed after `$datahandler` was executed and all data was received. You can access Server and Plugin Objects with ease there, beceause that is no longer Part of the Asynchronous Thread<br />
 `$data` is extra data which you can use in `$action` to Interact with different System Parts. Please not that as stated above, only primitive Data Types are allowed.<br />
+`$closures` You can give an unlimited amount of functions there, which will be executed.
+            They get the method parameters `(Server $server, Object $result, array $extradata)`
 
 ## Examples
 

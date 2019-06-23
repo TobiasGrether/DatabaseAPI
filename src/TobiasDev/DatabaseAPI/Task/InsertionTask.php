@@ -1,7 +1,17 @@
 <?php
+/**
+ * Copyright (c) 2019.
+ * This Software may not be shared without explicit permission from the Developers of this System.
+ * You are not allowed to redistribute this under any terms or conditions without explicit permission.
+ * #     #   #     #  #  #    #     #   #      #      # # # # #
+ * #     # #     # #    #   #     #   #      #      #     # #     #
+ *
+ */
 
-	 namespace TobiasDev\DatabaseAPI\Task;
+namespace TobiasDev\DatabaseAPI\Task;
 
+	 use Closure;
+	 use mysqli;
 	 use pocketmine\scheduler\AsyncTask;
 	 use pocketmine\Server;		
 	 use TobiasDev\DatabaseAPI\Connection;
@@ -9,7 +19,7 @@
 	 class InsertionTask extends AsyncTask
 	 {
 
-		  /** @var \Closure */
+		  /** @var Closure */
 		  private $action;
 
 		  /** @var String */
@@ -22,7 +32,7 @@
 		  private $db;
 		  /** @var array  */
 		  private $extra_data;
-		  public function __construct ( String $query, Connection $connection, String $database, ?\Closure $closure, array $extra_data)
+		  public function __construct ( String $query, Connection $connection, String $database, ?Closure $closure, array $extra_data)
 		  {
 
 				$this->action = $closure;
@@ -36,7 +46,7 @@
 		  public function onRun ()
 		  {
 
-				$db = new \mysqli( $this->connection->host, $this->connection->user, $this->connection->password, $this->db );
+				$db = new mysqli( $this->connection->host, $this->connection->user, $this->connection->password, $this->db );
 				$this->setResult( $db->query( $this->query ) );
 				$db->close();
 		  }

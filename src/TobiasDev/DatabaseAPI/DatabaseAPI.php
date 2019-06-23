@@ -1,6 +1,14 @@
 <?php
+/**
+ * Copyright (c) 2019.
+ * This Software may not be shared without explicit permission from the Developers of this System.
+ * You are not allowed to redistribute this under any terms or conditions without explicit permission.
+ * #     #   #     #  #  #    #     #   #      #      # # # # #
+ * #     # #     # #    #   #     #   #      #      #     # #     #
+ *
+ */
 
-	 namespace TobiasDev\DatabaseAPI;
+namespace TobiasDev\DatabaseAPI;
 
 	 use pocketmine\plugin\PluginBase;
 
