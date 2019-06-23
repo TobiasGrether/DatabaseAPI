@@ -48,12 +48,19 @@ namespace TobiasDev\DatabaseAPI\Task;
 
 				$db = new mysqli( $this->connection->host, $this->connection->user, $this->connection->password, $this->db );
 				$this->setResult( $db->query( $this->query ) );
+			  	if(!empty($db->error_list)) {
+					$this->setResult($db->error_list);
+				}
 				$db->close();
 		  }
 
 
 		  public function onCompletion ( Server $server )
 		  {
+			  if(is_array($this->getResult())){
+				  var_dump($this->getResult());
+				  return;
+			  }
 				if($this->action !== null) {
 					 $action = $this->action;
 					 $action( $this->getResult(), $this->extra_data );
