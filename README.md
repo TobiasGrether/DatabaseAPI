@@ -36,7 +36,7 @@ You have the Method Header<br />
 
 ### Connection Creation
 Here you have an example for an Connection Object Creation:<br />
-`$connection = DatabaseAPI::constructConnection("mysql.battlemc.de", "stats", "justanotherpassword");`<br />
+`$connection = DatabaseAPI::constructConnection("test.host.ip", "stats", "justanotherpassword");`<br />
 
 ### Insertion Statements
 Here is an Insertion Statement example:
