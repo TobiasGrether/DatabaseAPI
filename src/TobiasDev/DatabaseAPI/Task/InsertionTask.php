@@ -47,7 +47,9 @@ namespace TobiasDev\DatabaseAPI\Task;
 		  {
 
 				$db = new mysqli( $this->connection->host, $this->connection->user, $this->connection->password, $this->db );
-				$this->setResult( $db->query( $this->query ) );
+			  	$s = $db->prepare($this->query);
+			  	$s->execute();
+				$this->setResult( $s->get_result() );
 			  	if(!empty($db->error_list)) {
 					$this->setResult($db->error_list);
 				}
