@@ -59,7 +59,9 @@ namespace TobiasDev\DatabaseAPI\Task;
 		  {
 
 				$db = new mysqli( $this->connection->host, $this->connection->user, $this->connection->password, $this->db );
-				$result = $db->query( $this->query );
+				$stmt = $db->prepare($this->query);
+			  	$stmt->execute();
+			  	$result = $stmt->get_result();
 				if ( $result instanceof mysqli_result ) {
 
 					 if ( $this->handledata === null ) {
