@@ -12,7 +12,7 @@ This method has the method header <br />`(String $host, String $user, String $pa
 
 # Making Insertion Statements
 Once you have a Connection Object,<br />
-Making Insertion Statements is really simply<br />
+Making Insertion Statements is really simple<br />
 The Method header for that is <br />
 `(String $query, String $database, Closure $action, array $data)`<br />
 `$query` is the MySQL Query you want to execute <br />
